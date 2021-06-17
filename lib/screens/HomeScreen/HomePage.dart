@@ -83,7 +83,19 @@ class _HomePageState extends State<HomePage> {
                     mainAxisSpacing: 10,
                     crossAxisSpacing: 10),
                 itemBuilder: (context, index) => ItemCard(
-                  imageUrl: selectedIndexList[index].toString(),
+                  // ============================================================================================
+                  // Data yang dimasukin harus spesifik sesuai model yang dibuat di models/plant_model.dart
+                  // ============================================================================================
+                  imageUrl: selectedIndexList[index].imageUrl,
+                  name: selectedIndexList[index].name,
+                  title: selectedIndexList[index].title,
+                  category: selectedIndexList[index].category,
+                  price: selectedIndexList[index].price,
+                  size: selectedIndexList[index].size,
+                  description: selectedIndexList[index].description,
+                  sun: selectedIndexList[index].sun,
+                  temp: selectedIndexList[index].temp,
+                  water: selectedIndexList[index].water,
                   // press: () => Navigator.push(
                   //   context,
                   //   MaterialPageRoute(
